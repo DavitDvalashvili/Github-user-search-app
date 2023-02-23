@@ -15,11 +15,11 @@ This is a solution to the [Github-user-search-app]
 Users should be able to:
 
 
-View the optimal layout for the app depending on their device's screen size
-See hover states for all interactive elements on the page
-Search for GitHub users by their username
-See relevant user information based on their search
-Switch between light and dark themes
+- View the optimal layout for the app depending on their device's screen size;
+- See hover states for all interactive elements on the page;
+- Search for GitHub users by their username;
+- See relevant user information based on their search;
+- Switch between light and dark themes;
 
 
 ![](./preview.jpg)
