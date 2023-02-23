@@ -1,3 +1,4 @@
+// global variables sellected from html.
 const moon = document.querySelector("#moon");
 const sun = document.querySelector("#sun");
 const title = document.querySelector(".title");
@@ -18,11 +19,12 @@ const city = document.querySelector("#city");
 const blog = document.querySelector("#blog");
 const twitter = document.querySelector("#twitter");
 const company = document.querySelector("#company");
-const errorElement = document.querySelector("#error");
+const errorMobile = document.querySelector("#error-mobile");
+const errorDesktop = document.querySelector("#error-desktop");
 const infoSvg = document.querySelectorAll(".info-svg");
 
 
-
+// octocat object
 const octocat = {
     avatar_url: "https://avatars.githubusercontent.com/u/583231?v=4",
     bio: null,
@@ -58,11 +60,13 @@ const octocat = {
     url: "https://api.github.com/users/octocat",
 };
 
-input.addEventListener("input", () => {
-    errorElement.textContent = " "
+// hide error message while searching
+input.addEventListener("focus", () => {
+    errorMobile.textContent = " ";
+    errorDesktop.textContent = " ";
 })
 
-
+// displays information on site
 const displayInfo = (user) => {
     avatarMobile.src = user.avatar_url;
     avatarDesktop.src = user.avatar_url;
@@ -100,6 +104,7 @@ const displayInfo = (user) => {
     }
 };
 
+//date format transformer function
 const dateTransformer = (date) => {
     const dateObj = new Date(date);
     const dateString = dateObj.toDateString();
@@ -110,7 +115,7 @@ const dateTransformer = (date) => {
 displayInfo(octocat);
 
 
-
+// theme changer function
 function flipTheme(theme) {
     if (theme === "dark") {
         moon.style.display = "none";
@@ -139,23 +144,29 @@ function flipTheme(theme) {
             element.firstElementChild.setAttribute('fill', '#4b6a9b');
         }
     })
+    if(themeText.textContent === "dark") {
+        themeText.textContent = "light"
+    } else {
+        themeText.textContent = "dark"
+    }
 
 }
+
 moon.addEventListener("click", () => flipTheme ("dark"));
 sun.addEventListener("click", () => flipTheme ("light"));
 
-
+//get info from github
 button.addEventListener("click", async (event) => {
     event.preventDefault();
     try {
       const response = await axios.get(
-        "https://api.github.com/users/" + input.value
-      );
+        "https://api.github.com/users/" + input.value);
       const user = response.data;
       displayInfo(user);
       input.value = "";
     } catch (error) {
-      errorElement.textContent = "No result";
+        errorMobile.textContent = "No result";
+        errorDesktop.textContent = "No result";
     }
-  });
+});
   

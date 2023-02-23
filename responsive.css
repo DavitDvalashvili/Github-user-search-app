@@ -1,0 +1,110 @@
+/* for 768 px resolution */
+
+@media (min-width: 768px) {
+  body {
+    padding: 0 98px;
+    padding-bottom: 236px;
+  }
+  .header, .card {
+    max-width: 572px;
+  }
+  .header {
+    margin-top: 144px;
+  }
+  #user {
+    font-size: 18px;
+    line-height: 25px;
+    width: 254px;
+  }
+  .btn,
+  .login {
+    font-size: 16px;
+    line-height: 23.7px;
+  }
+  .form {
+    padding: 10px 10px 10px 32px;
+  }
+  .name {
+    font-size: 26px;
+    line-height: 38.51px;
+  }
+  .user-info {
+    padding: 40px;
+  }
+  .general {
+    column-gap: 40px;
+  }
+  .join-date,
+  .info-text {
+    font-size: 15px;
+    line-height: 22.22px;
+  }
+  .bio {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .stat-title {
+    font-size: 13px;
+    line-height: 19.25px;
+  }
+  .amount {
+    font-size: 22px;
+    line-height: 32.58px;
+  }
+  .stats {
+    column-gap: 98px;
+  }
+  .stat {
+    text-align: left;
+  }
+  .infos {
+    grid-template-columns: auto auto;
+    width: 100%;
+  }
+  .info:nth-child(3) {
+    grid-column: 2/2;
+    grid-row: 1/2;
+  }
+  .error-mobile {
+    display: none;
+  }
+  .error-desktop {
+    display: block;
+    color: var(--error);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    margin-left: auto;
+  }
+  .btn {
+    margin-left: 24px;
+  }
+  .form {
+    margin-bottom: 24px;
+  }
+}
+
+/* for 1440 px resolution */
+
+@media (min-width: 1440px) {
+  body {
+    padding: 0;
+  }
+  .header,
+  .card {
+    max-width: 730px;
+  }
+  .avatar-mobile {
+    display: none;
+  }
+  .avatar-desktop {
+    display: block;
+  }
+  .user-info {
+    display: flex;
+    column-gap: 37px;
+    padding: 48px;
+  }
+
+}
+  

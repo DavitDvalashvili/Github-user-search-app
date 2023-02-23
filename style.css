@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
 :root {
+    /* colors */
     --electric: #0079FF;
     --gray: #697C9A;
     --dark-sky: #4B6A9B;
@@ -10,6 +11,18 @@
     --dark: #141D2F;
     --semi-dark: #1E2A47;
     --error: #F74646;
+    /* font-weight */
+    --bald: 400;
+    --balder: 700;
+}
+/* general styling */
+.title, .theme-text, .btn,
+.error-mobile, .name, .amount {
+    font-weight: 700;
+}
+#user,.login, .join-date,
+.bio, .stat-title, .info-text {
+    font-weight: 400;
 }
 
 body {
@@ -30,7 +43,6 @@ body {
     margin-top: 31px;
 }
 .title {
-    font-weight: 700;
     font-size: 26px;
     line-height: 38.51px;
     color: #222731;
@@ -39,7 +51,6 @@ body {
     color: var(--white);
 }
 .theme-text {
-    font-weight: 700;
     font-size: 13px;
     line-height: 19.25px;
     letter-spacing: 2.5px;
@@ -56,6 +67,9 @@ body {
 }
 #sun {
     display: none;
+}
+#moon, #sun {
+    cursor: pointer;
 }
 .card {
     width: 100%;
@@ -78,10 +92,12 @@ body {
 .bio.dark {
     color: var(--white);
 }
+#blog:hover {
+    text-decoration: underline;
+}
 
 #user {
     font-size: 13px;
-    font-weight: 400;
     line-height: 25px;
     margin-left: 9px;
     outline: none;
@@ -103,29 +119,36 @@ body {
     padding: 12px 16px;
     text-transform: capitalize;
     font-size: 14px;
-    font-weight: 700;
     line-height: 20.73px;
     color: var(--white);
     background-color: var(--electric);
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 7px;
+    margin-left: auto;
 }
-.error {
+.btn:hover {
+    background-color: #60ABFF;
+    transition: all 0.5s ease-out;
+}
+.error-mobile {
     margin-top: 10px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 22px;
     color: var(--error);
-    height: 25px;
-    width: fit-content;
-    margin-right: auto;
+    height: 24px;
+    margin: 1px auto 1px 1px;
+}
+.error-desktop {
+    display: none;
 }
 .user-info {
     padding: 32px 24px 48px 24px;
 }
 .avatar-desktop {
     display: none;
+    width: 117px;
+    height: 117px;
+    border-radius: 50%;
 }
 .info {
     width: 100%;
@@ -141,27 +164,23 @@ body {
     border-radius: 50%;
 }
 .name {
-    font-weight: 700;
     font-size: 16px;
     line-height: 23.7px;
     color: var(--dark-blue);
     text-transform: capitalize;
 }
 .login {
-    font-weight: 400;
     font-size: 13px;
     line-height: 19.25px;
     color: var(--electric);
 }
 .join-date {
-    font-weight: 400;
     font-size: 13px;
     line-height: 19.25px;
     color: var(--gray);
     margin-top: 6px;
 }
 .bio {
-    font-weight: 400;
     font-size: 13px;
     line-height: 25px;
     color: var(--dark-sky);
@@ -182,21 +201,18 @@ body {
     text-align: center;
 }
 .stat-title {
-    font-weight: 400;
     font-size: 11px;
     line-height: 11.29px;
     color: var(--dark-sky);
     text-transform: capitalize;
 }
 .amount {
-    font-weight: 700;
     font-size: 16px;
     line-height: 23.7px;
     margin-top: 8px;
 }
 
 .join-date {
-  font-weight: 400;
   font-size: 13px;
   line-height: 19.25px;
   color: var(--gray);
@@ -204,7 +220,6 @@ body {
 }
 
 .bio {
-  font-weight: 400;
   font-size: 13px;
   line-height: 25px;
   color: var(--darkSky);
@@ -232,7 +247,6 @@ body {
 }
 
 .stat-title {
-  font-weight: 400;
   font-size: 11px;
   line-height: 16.29px;
   color: var(--darkSky);
@@ -240,23 +254,21 @@ body {
 }
 
 .amount {
-  font-weight: 700;
   font-size: 16px;
   line-height: 23.7px;
   margin-top: 8px;
 }
 
-.locations {
+.infos {
     margin-top: 24px;
     display: grid;
     grid-template-columns: auto;
     row-gap: 17px;
 }
-.location-info {
+.info {
     position: relative;
 }
-.location-text {
-    font-weight: 400;
+.info-text {
     font-size: 13px;
     line-height: 19.25px;
     color: var(--dark-sky);
@@ -272,3 +284,5 @@ body {
 .bio.dark {
     color: var(--white);
 }
+
+
